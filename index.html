@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SmAdds Earn v7</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+
+<div id="homePage"
+class="page active">
+
+<div class="header-card">
+
+<h2>💎 SmAdds Earn</h2>
+
+<p>Total Balance</p>
+
+<h1 id="coin">0</h1>
+
+<button
+class="claim-btn"
+onclick="claimReward()">
+
+🎁 ফ্রি ৫০ টাকা
+
+</button>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<h3 id="homeRef">
+0
+</h3>
+
+<p>Referrals</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>
+1
+</h3>
+
+<p>Rank</p>
+
+</div>
+
+</div>
+
+<div class="menu-grid">
+
+<div
+class="menu-card"
+onclick="dailyBonus()">
+
+<i class="fas fa-gift"></i>
+
+<span>
+Daily Bonus
+</span>
+
+</div>
+
+<div
+class="menu-card"
+onclick="showPage('tasksPage')">
+
+<i class="fas fa-list-check"></i>
+
+<span>
+Tasks
+</span>
+
+</div>
+
+<div
+class="menu-card"
+onclick="showPage('referPage')">
+
+<i class="fas fa-user-group"></i>
+
+<span>
+Referral
+</span>
+
+</div>
+
+<div
+class="menu-card"
+onclick="showPage('withdrawPage')">
+
+<i class="fas fa-wallet"></i>
+
+<span>
+Withdraw
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TASKS -->
+
+<div id="tasksPage"
+class="page">
+
+<div class="top-title">
+
+<h2>
+📋 Tasks
+</h2>
+
+</div>
+
+<div class="task-card">
+
+<div>
+
+<h3>
+📢 Join Telegram
+</h3>
+
+<p>
+Reward 50 Coins
+</p>
+
+</div>
+
+<button
+onclick="telegramTask()">
+
+GO
+
+</button>
+
+</div>
+
+<div class="task-card">
+
+<div>
+
+<h3>
+▶️ Subscribe YouTube
+</h3>
+
+<p>
+Reward 30 Coins
+</p>
+
+</div>
+
+<button
+onclick="youtubeTask()">
+
+GO
+
+</button>
+
+</div>
+
+</div><!-- REFERRAL PAGE -->
+
+<div id="referPage"
+class="page">
+
+<div class="top-title">
+
+<h2>
+👥 Referral System
+</h2>
+
+</div>
+
+<div class="ref-card">
+
+<h3>
+Your Referral Code
+</h3>
+
+<h1 id="refCode">
+USER0000
+</h1>
+
+<p>
+Invite friends and earn rewards
+</p>
+
+<button
+onclick="copyReferral()">
+
+Copy Referral Link
+
+</button>
+
+</div>
+
+</div>
+
+<!-- WITHDRAW PAGE -->
+
+<div id="withdrawPage"
+class="page">
+
+<div class="top-title">
+
+<h2>
+💸 Withdraw
+</h2>
+
+</div>
+
+<div class="withdraw-card">
+
+<input
+type="number"
+id="withdrawAmount"
+placeholder="Amount">
+
+<input
+type="text"
+id="withdrawNumber"
+placeholder="Bkash / Nagad Number">
+
+<button
+onclick="withdraw()">
+
+Submit Withdraw
+
+</button>
+
+</div>
+
+<div class="history-card">
+
+<h3>
+Withdraw History
+</h3>
+
+<div id="historyBox">
+
+No Withdraw Yet
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROFILE PAGE -->
+
+<div id="profilePage"
+class="page">
+
+<div class="top-title">
+
+<h2>
+👤 Profile
+</h2>
+
+</div>
+
+<div class="profile-card">
+
+<div class="profile-avatar">
+👤
+</div>
+
+<h3 id="userId">
+USER0000
+</h3>
+
+<p>
+Total Coins
+</p>
+
+<h2 id="profileCoins">
+0
+</h2>
+
+<hr>
+
+<div class="profile-item">
+👥 Referrals :
+<span id="refCount">
+0
+</span>
+</div>
+
+<div class="profile-item">
+🎁 Rewards :
+<span>
+0
+</span>
+</div>
+
+<div class="profile-item">
+📅 Join Date :
+<span id="joinDate">
+</span>
+</div>
+
+<button
+onclick="window.open('https://t.me/+IxOmY7N9Z91kYzU1','_blank')">
+
+📢 Telegram Channel
+
+</button>
+
+<button
+onclick="window.open('https://youtube.com/@dingerboy100k','_blank')">
+
+▶️ YouTube Channel
+
+</button>
+
+<button
+onclick="window.open('https://t.me/mahi122','_blank')">
+
+📞 Support
+
+</button>
+
+</div>
+
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+
+<div class="bottom-nav">
+
+<div
+onclick="showPage('homePage')">
+
+<i class="fas fa-house"></i>
+
+<p>
+Home
+</p>
+
+</div>
+
+<div
+onclick="showPage('tasksPage')">
+
+<i class="fas fa-list-check"></i>
+
+<p>
+Tasks
+</p>
+
+</div>
+
+<div
+onclick="showPage('referPage')">
+
+<i class="fas fa-user-group"></i>
+
+<p>
+Refer
+</p>
+
+</div>
+
+<div
+onclick="showPage('withdrawPage')">
+
+<i class="fas fa-wallet"></i>
+
+<p>
+Withdraw
+</p>
+
+</div>
+
+<div
+onclick="showPage('profilePage')">
+
+<i class="fas fa-user"></i>
+
+<p>
+Profile
+</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
