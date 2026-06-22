@@ -318,3 +318,23 @@ transition:0.3s;
 .menu-card:hover{
 transform:translateY(-5px);
 }
+.claim-btn,
+.task-card button,
+.ref-card button,
+.withdraw-card button,
+.profile-card button{
+
+transition:0.3s;
+cursor:pointer;
+
+}
+
+.claim-btn:active,
+.task-card button:active,
+.ref-card button:active,
+.withdraw-card button:active,
+.profile-card button:active{
+
+transform:scale(0.95);
+
+}
