@@ -300,3 +300,25 @@ document.getElementById("loader").style.display = "none";
 }, 2000);
 
 });
+// Telegram User Info
+
+if (window.Telegram && Telegram.WebApp) {
+
+const tg = Telegram.WebApp;
+
+tg.expand();
+
+if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+
+const user = tg.initDataUnsafe.user;
+
+document.getElementById("telegramName").innerHTML =
+user.first_name +
+(user.last_name ? " " + user.last_name : "");
+
+document.getElementById("telegramId").innerHTML =
+"ID: " + user.id;
+
+}
+
+}
