@@ -136,18 +136,32 @@ alert(
 
 function copyReferral(){
 
-let code =
-document.getElementById("refCode")
-.innerHTML;
+    let code =
+    document.getElementById("refCode")
+    .innerHTML;
 
-navigator.clipboard.writeText(code);
+    let link =
+    "https://t.me/Sm_Adds_Zone_Bot?start=" + code;
 
-alert(
-"Referral Code Copied"
-);
+    navigator.clipboard.writeText(link)
+    .then(() => {
+
+        alert(
+        "✅ Referral Link Copied!\n\n" +
+        link
+        );
+
+    })
+    .catch(() => {
+
+        prompt(
+        "Referral Link:",
+        link
+        );
+
+    });
 
 }
-
 function withdraw(){
 
 let amount =
