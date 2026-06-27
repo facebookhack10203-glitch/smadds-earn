@@ -281,5 +281,11 @@ onclick="window.open('https://t.me/mahi122','_blank')">
 
 <script src="script.js"></script>
 
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
 </body>
 </html>
